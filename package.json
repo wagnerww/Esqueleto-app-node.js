@@ -1,0 +1,17 @@
+{
+  "name": "autenticacao-jwt-mongo-restify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.7",
+    "restify": "^7.6.0"
+  }
+}
