@@ -11,7 +11,7 @@ const crud = {
 
     create: async (model, req, res, next) => {
         try {
-            const data = await model.create()
+            const data = await model.create(req.body)
             res.send(200, data);
         } catch (err) {
             return res.send(400, { "erro": `Falha ao cadastrar:  ${err}` });
