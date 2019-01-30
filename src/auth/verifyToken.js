@@ -5,8 +5,8 @@ verifyToken = async (req, res, next) => {
     if (!token)
         return res.send(403, { auth: false, accessToken: null, mensagem: "Sem acesso" });
 
-    const { id } = await jwt.verify(token, 'secret_token');
-
+    const {user} = await jwt.verify(token, 'secret_token');
+    const {id, perfil} = user;    
     req.id = id; ///Cria um cabeçalho do usuário para o próximo nível
     next();
 }
