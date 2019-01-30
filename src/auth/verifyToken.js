@@ -5,9 +5,9 @@ verifyToken = async (req, res, next) => {
     if (!token)
         return res.send(403, { auth: false, accessToken: null, mensagem: "Sem acesso" });
 
-    const email  = await jwt.verify(token, 'secret_token');
-    console.log('email',email)
-    req.email = email;
+    const { id } = await jwt.verify(token, 'secret_token');
+
+    req.id = id; ///Cria um cabeçalho do usuário para o próximo nível
     next();
 }
 
