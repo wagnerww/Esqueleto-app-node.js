@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 
 //Cria a conexão com o Mongo
 mongoose.connect(
-    'mongodb://127.0.0.1:27017/auth',
+    'mongodb://mongo/auth',
     {
         useNewUrlParser: true      
     }
+
 );
 
 mongoose.connection.on('connected', function () {
@@ -19,4 +20,4 @@ mongoose.connection.on('connected', function () {
    }); 
 
 mongoose.Promise = global.Promise;
-module.exports = mongoose
+module.exports = mongoose;
